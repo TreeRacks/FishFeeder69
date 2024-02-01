@@ -1,0 +1,2 @@
+-keep class ai.picovoice.rhino.*Exception { <init>(...); }
+-keep class ai.picovoice.rhino.RhinoInference

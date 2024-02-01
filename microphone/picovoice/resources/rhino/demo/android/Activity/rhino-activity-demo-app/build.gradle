@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+Properties properties = new Properties()
+if (rootProject.file("local.properties").exists()) {
+    properties.load(rootProject.file("local.properties").newDataInputStream())
+    if (project.hasProperty("pvTestingAccessKey")) {
+        properties.put("pvTestingAccessKey", project.getProperty("pvTestingAccessKey"))
+    }
+    if (project.hasProperty("numTestIterations")) {
+        properties.put("numTestIterations", project.getProperty("numTestIterations"))
+    }
+    if (project.hasProperty("performanceThresholdSec")) {
+        properties.put("performanceThresholdSec", project.getProperty("performanceThresholdSec"))
+    }
+}
+
+android {
+    compileSdkVersion defaultTargetSdkVersion
+
+    defaultConfig {
+        applicationId "ai.picovoice.rhinodemo"
+        minSdkVersion 21
+        targetSdkVersion defaultTargetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        resValue 'string', 'pvTestingAccessKey', properties.getProperty("pvTestingAccessKey", "")
+        resValue 'string', 'numTestIterations', properties.getProperty("numTestIterations", "")
+        resValue 'string', 'performanceThresholdSec', properties.getProperty("performanceThresholdSec", "")
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        androidTest {
+            java {
+                System.out.println()
+                if (properties.getProperty("performanceThresholdSec", "").length() == 0) {
+                    exclude "**/PerformanceTest.java"
+                } else {
+                    exclude "**/RhinoTest.java"
+                }
+            }
+        }
+    }
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'ai.picovoice:rhino-android:2.1.4'
+
+    // Espresso UI Testing
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.4')
+}

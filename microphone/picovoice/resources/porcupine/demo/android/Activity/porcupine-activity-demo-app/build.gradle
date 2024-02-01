@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+Properties properties = new Properties()
+if (rootProject.file("local.properties").exists()) {
+    properties.load(rootProject.file("local.properties").newDataInputStream())
+    if (project.hasProperty("pvTestingAccessKey")) {
+        properties.put("pvTestingAccessKey", project.getProperty("pvTestingAccessKey"))
+    }
+    if (project.hasProperty("numTestIterations")) {
+        properties.put("numTestIterations", project.getProperty("numTestIterations"))
+    }
+    if (project.hasProperty("performanceThresholdSec")) {
+        properties.put("performanceThresholdSec", project.getProperty("performanceThresholdSec"))
+    }
+}
+
+android {
+    compileSdkVersion defaultTargetSdkVersion
+    
+    defaultConfig {
+        applicationId "ai.picovoice.porcupine.demo"
+        minSdkVersion 21
+        targetSdkVersion defaultTargetSdkVersion
+        versionCode 7
+        versionName "2.1.3"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        resValue 'string', 'pvTestingAccessKey', properties.getProperty("pvTestingAccessKey", "")
+        resValue 'string', 'numTestIterations', properties.getProperty("numTestIterations", "")
+        resValue 'string', 'performanceThresholdSec', properties.getProperty("performanceThresholdSec", "")
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        androidTest {
+            java {
+                System.out.println()
+                if (properties.getProperty("performanceThresholdSec", "").length() == 0) {
+                    exclude "**/PerformanceTest.java"
+                } else {
+                    exclude "**/PorcupineTest.java"
+                }
+            }
+        }
+    }
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'ai.picovoice:porcupine-android:2.1.3'
+
+    // Espresso UI Testing
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.4')
+}
+
+task copyPorcupineResources(type: Copy) {
+    from("$projectDir/../../../../resources/keyword_files/android")
+    include('alexa_android.ppn',
+            'americano_android.ppn',
+            'blueberry_android.ppn',
+            'bumblebee_android.ppn',
+            'computer_android.ppn',
+            'grapefruit_android.ppn',
+            'grasshopper_android.ppn',
+            'hey google_android.ppn',
+            'hey siri_android.ppn',
+            'jarvis_android.ppn',
+            'ok google_android.ppn',
+            'picovoice_android.ppn',
+            'porcupine_android.ppn',
+            'terminator_android.ppn')
+    into("$projectDir/src/main/assets")
+    rename { String fileName ->
+        fileName.replace("_android", "").replace(" ", "_")
+    }
+}
+
+preBuild.dependsOn(copyPorcupineResources)

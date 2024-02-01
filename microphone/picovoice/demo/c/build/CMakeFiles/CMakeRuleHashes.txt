@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+10fa3c786ca5a51942589e21c6b94171 pvrecorder/node/CMakeFiles/node_headers
+d56390a95cdca8e02a299cddea905a05 pvrecorder/node/CMakeFiles/node_headers-complete
+b00372c6e698d6f8df04dede2444560d pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-build
+f58ddfa4a2c4ae1be62f773ce22f52c1 pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-configure
+dad81451f49c37a5ab189ea24c432c99 pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-download
+f1c5cd90a9684d1213e03ea1cdffb54c pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-install
+3a77d7da2543d782ff55d815ea364965 pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-mkdir
+399e895fe5a84897bb5b8021c38c3e90 pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-patch
+390c290e661c28a2570540c273e7beae pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-update

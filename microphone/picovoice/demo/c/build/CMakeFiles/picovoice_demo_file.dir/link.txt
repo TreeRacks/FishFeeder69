@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/picovoice_demo_file.dir/picovoice_demo_file.c.o -o picovoice_demo_file  -ldl 

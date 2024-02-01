@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -fvisibility=hidden -O3 -DNDEBUG -shared -Wl,-soname,libpv_recorder.so -o libpv_recorder.so CMakeFiles/pv_recorder_object.dir/src/pv_circular_buffer.c.o CMakeFiles/pv_recorder_object.dir/src/pv_recorder.c.o  -lpthread -ldl -lm 

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -fvisibility=hidden -O3 -DNDEBUG -shared -Wl,-soname,pv_recorder.node -o pv_recorder.node CMakeFiles/pv_recorder_napi.dir/pv_recorder_napi.c.o ../CMakeFiles/pv_recorder_object.dir/src/pv_circular_buffer.c.o ../CMakeFiles/pv_recorder_object.dir/src/pv_recorder.c.o 

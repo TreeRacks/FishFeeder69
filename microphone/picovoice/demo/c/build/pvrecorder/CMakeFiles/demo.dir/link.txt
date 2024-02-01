@@ -1,0 +1,1 @@
+/usr/bin/cc  -fvisibility=hidden -O3 -DNDEBUG CMakeFiles/demo.dir/example/demo.c.o -o demo  -Wl,-rpath,/home/debian/microphone/picovoice/demo/c/build/pvrecorder -lpthread -ldl -lm libpv_recorder.so -latomic -lpthread -ldl -lm 

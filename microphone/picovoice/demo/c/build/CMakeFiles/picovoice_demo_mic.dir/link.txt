@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/picovoice_demo_mic.dir/picovoice_demo_mic.c.o pvrecorder/CMakeFiles/pv_recorder_object.dir/src/pv_circular_buffer.c.o pvrecorder/CMakeFiles/pv_recorder_object.dir/src/pv_recorder.c.o -o picovoice_demo_mic  -ldl -lpthread -lm -latomic 

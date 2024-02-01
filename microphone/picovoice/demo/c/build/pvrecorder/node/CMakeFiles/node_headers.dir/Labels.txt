@@ -1,0 +1,13 @@
+# Target labels
+ node_headers
+# Source files and their labels
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/node_headers
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/node_headers.rule
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/node_headers-complete.rule
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-build.rule
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-configure.rule
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-download.rule
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-install.rule
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-mkdir.rule
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-patch.rule
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-update.rule

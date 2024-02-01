@@ -1,0 +1,27 @@
+name: rhino_demo
+description: Demonstrates how to use the rhino plugin.
+
+publish_to: 'none'
+
+version: 1.0.0
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+  flutter: ">=2.8.1"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  rhino_flutter: ^2.1.7
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lints: ^1.0.1
+
+flutter:  
+  uses-material-design: true
+  assets:
+    - assets/contexts/android/smart_lighting_android.rhn
+    - assets/contexts/ios/smart_lighting_ios.rhn 

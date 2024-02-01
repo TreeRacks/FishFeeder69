@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/node_headers"
+		},
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/node_headers.rule"
+		},
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/node_headers-complete.rule"
+		},
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-build.rule"
+		},
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-configure.rule"
+		},
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-download.rule"
+		},
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-install.rule"
+		},
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-mkdir.rule"
+		},
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-patch.rule"
+		},
+		{
+			"file" : "/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/node_headers-prefix/src/node_headers-stamp/node_headers-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"node_headers"
+		],
+		"name" : "node_headers"
+	}
+}

@@ -1,0 +1,46 @@
+name: Rust Demos
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    paths:
+      - 'demo/rust/**'
+      - '!demo/rust/README.md'
+      - '.github/workflows/rust-demos.yml'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'demo/rust/**'
+      - '!demo/rust/README.md'
+      - '.github/workflows/rust-demos.yml'
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build-micdemo:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Rust dependencies
+      run: sudo apt install libasound2-dev
+
+    - name: Rust build micdemo
+      run: cargo build --verbose
+      working-directory: demo/rust/micdemo
+
+  build-filedemo:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Rust dependencies
+      run: sudo apt install libasound2-dev
+
+    - name: Rust build filedemo
+      run: cargo build --verbose
+      working-directory: demo/rust/filedemo

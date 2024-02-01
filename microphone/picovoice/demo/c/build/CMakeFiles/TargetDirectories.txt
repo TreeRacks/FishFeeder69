@@ -1,0 +1,14 @@
+/home/debian/microphone/picovoice/demo/c/build/CMakeFiles/picovoice_demo_mic.dir
+/home/debian/microphone/picovoice/demo/c/build/CMakeFiles/picovoice_demo_file.dir
+/home/debian/microphone/picovoice/demo/c/build/CMakeFiles/edit_cache.dir
+/home/debian/microphone/picovoice/demo/c/build/CMakeFiles/rebuild_cache.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/CMakeFiles/pv_recorder_object.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/CMakeFiles/pv_recorder.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/CMakeFiles/demo.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/CMakeFiles/test_circular_buffer.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/CMakeFiles/edit_cache.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/CMakeFiles/rebuild_cache.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/node_headers.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/pv_recorder_napi.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/edit_cache.dir
+/home/debian/microphone/picovoice/demo/c/build/pvrecorder/node/CMakeFiles/rebuild_cache.dir
