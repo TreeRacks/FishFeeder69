@@ -1,6 +1,6 @@
 All code for FishFeeder was integrated into microphone/picovoice/demo/c/picovoice_demo_mic
-rest of code/files is from Picocvoice for speech recognition, we have changed the keywords for wake up and intent.
-also 80% of the code in picovoice_demo_mic was from Picocvoice, while the other 20% was done by the group
+The rest of the code/files is from Picovoice for speech recognition, we have changed the keywords for wake up and intent.
+
 
 To Build:
 ($Host) cmake -S demo/c/. -B demo/c/build && cmake --build demo/c/build --target picovoice_demo_mic
